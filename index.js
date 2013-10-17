@@ -32,6 +32,15 @@ exports.supported = !!(element.requestFullscreen
   || element.mozRequestFullScreen);
 
 /**
+ * If the window is displayed in full screen mode or not.
+ */
+
+exports.isFullscreen = document.fullscreen
+  || document.mozFullScreen
+  || document.webkitIsFullScreen
+  || false;
+
+/**
  * Enter fullscreen mode for `el`.
  *
  * @param {Element} [el]
@@ -65,6 +74,7 @@ exports.exit = function(){
 function change(prop) {
   return function(){
     var val = document[prop];
+    exports.isFullscreen = val;
     exports.emit('change', val);
   }
 }
