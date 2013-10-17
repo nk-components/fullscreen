@@ -5,7 +5,7 @@
 
 ## Installation
 
-    $ component install component/fullscreen
+    $ component install nk-components/fullscreen
 
 ## Example
 
