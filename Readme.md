@@ -39,6 +39,10 @@ setTimeout(function(){
 
   Check if fullscreen is supported.
 
+### fullscreen.isFullscreen
+
+  If the window is displayed in full screen mode or not.
+
 ## License
 
   MIT
